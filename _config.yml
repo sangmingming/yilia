@@ -3,16 +3,18 @@ menu:
   主页: /
   所有文章: /archives
   # 随笔: /tags/随笔
+  朋友: /links
+  关于: /about
 
 # SubNav
 subnav:
-  github: "#"
-  weibo: "#"
-  rss: "#"
+    github: "https://github.com/sangmingming"
+    weibo: "http://weibo.com/mingmingsang"
+    rss: "/atom.xml"
   # facebook: "/"
   # google: "/"
   # twitter: "/"
-  # linkedin: "/"
+  #linkedin: "/"
 
 rss: /atom.xml
 
@@ -24,6 +26,7 @@ fancybox: true
 
 favicon: /favicon.png
 
-avatar: "https://avatars2.githubusercontent.com/u/2024949?v=2&s=150"
+avatar: "https://avatars3.githubusercontent.com/u/1477927?v=2&s=150"
 share: true
-duoshuo: "your duoshuo pro name"
+duoshuo: "isming"
+key: "4b0e75ced77d897a532d6072933c2b51"
