@@ -2,7 +2,8 @@ hexo-theme-yilia
 ================
 
 hexo-theme-yilia 是为 [hexo](https://github.com/tommy351/hexo) 2.4+制作的主题。     
-响应式设计，风格简约， 你可以点击 [我的博客](http://litten.github.io/) 查看效果。    
+响应式设计，风格简约， 你可以点击 [我的博客](http://litten.github.io/) 查看效果。            
+如有问题或需求，请提issue给我；或在这篇文章下留言[Hexo主题Yilia](http://litten.github.io/2014/08/31/hexo-theme-yilia/)。我都会看到并处理。
 
 关于主题：
 
@@ -95,6 +96,7 @@ tagcloud: true
 ##五、同步你的instagram图片
 
 如果喜欢instagram，Yilia可以帮助您同步图片。
+（目前由于HongKong问题，ins被禁…暂不可用）
 
 1. 新建页面
 
