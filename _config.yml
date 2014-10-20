@@ -2,7 +2,7 @@
 menu:
   主页: /
   所有文章: /archives
-  # 随笔: /tags/随笔
+  #标签: /tags
   朋友: /links
   关于: /about
 
@@ -31,4 +31,4 @@ share: true
 duoshuo: "isming"
 key: "4b0e75ced77d897a532d6072933c2b51"
 #是否开启云标签
-tagcloud: false
+tagcloud: true
