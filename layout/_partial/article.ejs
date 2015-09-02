@@ -13,7 +13,7 @@
         <%- partial('post/title', {class_name: 'article-title'}) %>
       </header>
       <% if (!index){ %>
-      <div class="article-info article-info-post">
+      <div class="article-info">
         <%- partial('post/tag') %>
         <%- partial('post/category') %>
         <div class="clearfix"></div>
@@ -23,24 +23,25 @@
     <div class="article-entry" itemprop="articleBody">
       <% if (post.excerpt && index){ %>
         <%- post.excerpt %>
-      <% } else { %>
-        <%- post.content %>
-      <% } %>
-    </div>
-    <% if (index){ %>
-    <div class="article-info article-info-index">
-      <%if(post.top){%>
-        <div class="article-pop-out tagcloud">
-          <a class="">置顶</a>
-        </div>
-      <% } %>
-      <%- partial('post/tag') %>
-      <%- partial('post/category') %>
-      <% if (post.excerpt && index){ %>
+        <hr/>
         <p class="article-more-link">
           <a <% if (!theme.excerpt_link){ %>class="hidden"<% } %> href="<%- url_for(post.path) %>#more"><%= theme.excerpt_link %> >></a>
         </p>
+      <% } else { %>
+        <%- post.content %>
+        <% if (index){ %>
+          <!-- show an end symbol if the article is fully displayed -->
+          <hr/>
+          <p class="article-more-link">
+            <a>end</a>
+          </p>
+        <% } %>
       <% } %>
+    </div>
+    <% if (index){ %>
+    <div class="article-info">
+      <%- partial('post/tag') %>
+      <%- partial('post/category') %>
       <div class="clearfix"></div>
     </div>
     <% } %>
