@@ -48,13 +48,14 @@
 		$tag = document.getElementById("js-tagcloud");
 		$aboutme = document.getElementById("js-aboutme");
 		$friends = document.getElementById("js-friends");
-		var tagStr = $tag?'<span class="viewer-title">标签</span><div class="viewer-div tagcloud" id="js-mobile-tagcloud"></div>':"";
-		var friendsStr = $friends?'<span class="viewer-title">友情链接</span><div class="viewer-div friends" id="js-mobile-friends"></div>':"";
-		var aboutmeStr = $aboutme?'<span class="viewer-title">关于我</span><div class="viewer-div aboutme" id="js-mobile-aboutme"></div>':"";
+		var tagStr = '<div class="viewer-title"><a href="/">主页</a></div>';
+    var allStr = '<div class="viewer-title"><a href="/archives">所有文章</a></div>';
+		var friendsStr =  '<div class="viewer-title"><a href="/links">朋友</a></div>';
+		var aboutmeStr =  '<div class="viewer-title"><a href="/about">关于</a></div>';
 
 		$viewer.innerHTML = '<div id="viewer-box">\
 		<div class="viewer-box-l">\
-			<div class="viewer-box-wrap">'+aboutmeStr+friendsStr+tagStr+'</div>\
+			<div class="viewer-box-wrap">'+tagStr+allStr+friendsStr+aboutmeStr+'</div>\
 		</div>\
 		<div class="viewer-box-r"></div>\
 		</div>';
@@ -93,7 +94,7 @@
 	Mobile.prototype.bindDOM = function(){
 		var self = this;
 		var scaleW = self.scaleW;
-		
+
 		//滑动隐藏
 		document.getElementById("viewer-box").addEventListener("webkitTransitionEnd", function(){
 
@@ -103,7 +104,7 @@
 			}else{
 				//console.log(self.idx);
 			}
-			
+
 		}, false);
 
 		//点击展示和隐藏
@@ -146,6 +147,6 @@
 			$('html, body').animate({scrollTop:0}, 'slow');
 		}, false);
 	};
-	
+
 	return Mobile;
 }))
